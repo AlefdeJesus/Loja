@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Essenza | Perfumes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container topbar">
+            <div class="logo"><span class="logo-mark"></span> Essenza</div>
+            <nav>
+                <button class="tab active" data-tab="home">Home</button>
+                <button class="tab" data-tab="graficos">Gráficos</button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <img src="https://images.unsplash.com/photo-1610375461246-83df859d849e?q=80&w=2000&auto=format&fit=crop"
+                alt="Perfume de luxo em fundo artístico" />
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <div class="hero-box">
+                    <h1 class="hero-title">Essenza. A elegância em cada nota.</h1>
+                    <p class="hero-sub">Uma linha de perfumes criada para marcar momentos, com fragrâncias modernas e
+                        atemporais.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container" id="home">
+            <h2 style="margin:0 0 12px">Destaques</h2>
+            <p class="muted" style="margin:0 0 18px">Conheça os perfumes mais desejados da coleção.</p>
+            <div class="grid">
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1563170423-18f482d82cc8?q=80&w=1200&auto=format&fit=crop"
+                        alt="Perfume classic gold" />
+                    <div class="card-body">
+                        <h3 class="card-title">Classic Gold</h3>
+                        <p class="muted">Notas de bergamota, âmbar e madeira.</p>
+                        <div class="price">R$ 299,90</div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1585386959984-a41552231684?q=80&w=1200&auto=format&fit=crop"
+                        alt="Perfume nocturne" />
+                    <div class="card-body">
+                        <h3 class="card-title">Nocturne</h3>
+                        <p class="muted">Jasmim, baunilha e patchouli.</p>
+                        <div class="price">R$ 349,90</div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1547887537-6158a90c0274?q=80&w=1200&auto=format&fit=crop"
+                        alt="Perfume aria" />
+                    <div class="card-body">
+                        <h3 class="card-title">Aria</h3>
+                        <p class="muted">Pêra, peônia e musk branco.</p>
+                        <div class="price">R$ 319,90</div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="container" id="graficos" style="display:none">
+            <h2 style="margin:0 0 12px">Gráficos de Vendas</h2>
+            <p class="muted" style="margin:0 0 18px">Acompanhe o desempenho mensal da linha Essenza.</p>
+            <div class="panel">
+                <canvas id="salesChart" height="120"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <div class="logo"><span class="logo-mark"></span> Essenza</div>
+                <p class="muted">Fragrâncias modernas e atemporais.</p>
+                <div class="social">
+                    <a href="#" aria-label="Instagram" title="Instagram">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Z"
+                                stroke="currentColor" stroke-width="1.5" />
+                            <path d="M16.5 11.999a4.5 4.5 0 1 1-9 0a4.5 4.5 0 0 1 9 0Z" stroke="currentColor"
+                                stroke-width="1.5" />
+                            <circle cx="18" cy="6" r="1" fill="currentColor" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Facebook" title="Facebook">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M13 20v-7h3l1-4h-4V7a2 2 0 0 1 2-2h2V2h-3a5 5 0 0 0-5 5v2H6v4h3v7h4Z"
+                                fill="currentColor" />
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="X" title="X">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="1.5" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Contato</h4>
+                <ul class="nav-list">
+                    <li><a href="mailto:contato@essenza.com">contato@essenza.com</a></li>
+                    <li><a href="tel:+5511999999999">(11) 99999-9999</a></li>
+                    <li><span>Av. Exemplo, 123 - São Paulo</span></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Institucional</h4>
+                <ul class="nav-list">
+                    <li><a href="#">Sobre</a></li>
+                    <li><a href="#">Política de Trocas</a></li>
+                    <li><a href="#">Privacidade</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Atendimento</h4>
+                <ul class="nav-list">
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Suporte</a></li>
+                    <li><a href="#">Meus Pedidos</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <small> 2025 Essenza. Todos os direitos reservados.</small>
+        </div>
+    </footer>
+
+    <script>
+        // Tabs simples
+        const tabs = document.querySelectorAll('.tab');
+        const home = document.getElementById('home');
+        const graficos = document.getElementById('graficos');
+        tabs.forEach(t => t.addEventListener('click', () => {
+            tabs.forEach(x => x.classList.remove('active'));
+            t.classList.add('active');
+            const showHome = t.dataset.tab === 'home';
+            home.style.display = showHome ? '' : 'none';
+            graficos.style.display = showHome ? 'none' : '';
+        }));
+
+        // Chart.js - Vendas Mensais (exemplo)
+        const ctx = document.getElementById('salesChart');
+        if (ctx) {
+            const data = {
+                labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+                datasets: [{
+                    label: 'Vendas (unidades)'
+                    , data: [120, 150, 180, 160, 210, 240, 230, 260, 280, 300, 270, 320]
+                    , borderColor: '#0ea5e9'
+                    , backgroundColor: 'rgba(14, 165, 233, 0.15)'
+                    , tension: 0.35
+                    , fill: true
+                    , pointRadius: 3
+                }]
+            };
+            new Chart(ctx, {
+                type: 'line',
+                data,
+                options: {
+                    plugins: { legend: { display: true } },
+                    scales: {
+                        y: { beginAtZero: true, ticks: { stepSize: 50 } }
+                    }
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
